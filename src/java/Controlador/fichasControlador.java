@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "fichasControlador", urlPatterns = {"/fichas"})
 public class fichasControlador extends HttpServlet {
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,11 +36,9 @@ public class fichasControlador extends HttpServlet {
         String idFicha = request.getParameter("idFicha");
         String idFor = request.getParameter("idFor");
         String feIni = request.getParameter("feIni");
-        String feFin = request.getParameter("feFin");
-        
+        String feFin = request.getParameter("feFin");  
         int opcion = Integer.parseInt(request.getParameter("opcion"));
-      
-              
+                   
         fichasVo ficVo = new fichasVo(idFicha, idFor, feIni, feFin );
         fichasDao ficDao = new fichasDao(ficVo);
    
